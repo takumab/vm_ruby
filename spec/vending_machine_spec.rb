@@ -26,9 +26,6 @@ RSpec.describe VendingMachine do
     })
   end
 
-  xit "should have change in denominations of 1p, 2p, 5p, 10p, 20p, 50p, £1, £2." do
-  end
-
   it "should ensure item is selected and the appropriate amount of money is inserted" do
     expect(@vm.choose_and_pay('A1', 50)).to eq('Cheetos')
   end
@@ -42,6 +39,7 @@ RSpec.describe VendingMachine do
   end
 
   it "should also return change if too much money is inserted" do
+    expect(@vm.choose_and_pay('D1', 200)).to eq("Vended Sandwich and your change: 50p")
   end
 
   it "should keep track of the products and change that it contains." do

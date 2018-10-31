@@ -21,6 +21,10 @@ class VendingMachine
   end
 
   def choose_and_pay(code, amount_paid)
-    @products[code][:name]
+    if amount_paid < @products[code][:price]
+      "Please insert #{@products[code][:price] - amount_paid}p more"
+    else
+      @products[code][:name]
+    end
   end
 end

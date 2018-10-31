@@ -2,8 +2,28 @@ require 'spec_helper'
 require './vending_machine'
 
 RSpec.describe VendingMachine do
+  before do
+    @vm = VendingMachine.new
+  end
 
   it "should take an initial load of products and change." do
+    expect(@vm.products).to eq({
+        'A1' => { name: 'Cheetos', price: 50 },
+        'B1' => { name: 'Snickers', price: 50 },
+        'C1' => { name: 'Sprite', price: 100 },
+        'D1' => { name: 'Sandwich', price: 150 }
+      })
+
+    expect(@vm.coins).to eq({
+      1 => 1,
+      2 => 1,
+      5 => 1,
+      10 => 1,
+      20 => 1,
+      50 => 1,
+      100 => 1,
+      200 => 1
+    })
   end
 
   it "should have change in denominations of 1p, 2p, 5p, 10p, 20p, 50p, £1, £2." do

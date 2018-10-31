@@ -34,6 +34,7 @@ RSpec.describe VendingMachine do
   end
 
   it "should ask for more money if insufficient funds have been inserted." do
+    expect(@vm.choose_and_pay('A1', 40).to eq("Please insert 10p more"))
   end
 
   it "should return the correct product." do

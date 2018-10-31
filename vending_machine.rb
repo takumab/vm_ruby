@@ -19,4 +19,8 @@ class VendingMachine
       200 => 1
     }
   end
+
+  def choose_and_pay(code, amount_paid)
+    @products[code][:name]
+  end
 end

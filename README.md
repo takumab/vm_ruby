@@ -46,3 +46,7 @@ but I ran into a bit of trouble when reaching the 'keep track of products and ch
 
 - As of right now the `choose_and_pay` method does not account for when a user inserts no money,
 but enters a code. In this case I would've raised an error stating user must insert some money.
+
+## Long Term Goals
+- Make it interactive where the user can enter their selection in the command line
+- Create separate functionality for coin and product iventory

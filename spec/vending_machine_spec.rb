@@ -27,7 +27,7 @@ RSpec.describe VendingMachine do
   end
 
   it "should ensure item is selected and the appropriate amount of money is inserted" do
-    expect(@vm.choose_and_pay('A1', 50)).to eq('Cheetos')
+    expect(@vm.choose_and_pay('A1', 50)).to eq('Vended: Cheetos')
   end
 
   it "should ask for more money if insufficient funds have been inserted." do
@@ -35,11 +35,11 @@ RSpec.describe VendingMachine do
   end
 
   it "should return the correct product." do
-    expect(@vm.choose_and_pay('D1', 150)).to eq('Sandwich')
+    expect(@vm.choose_and_pay('D1', 150)).to eq('Vended: Sandwich')
   end
 
   it "should also return change if too much money is inserted" do
-    expect(@vm.choose_and_pay('D1', 200)).to eq("Vended Sandwich and your change: 50p")
+    expect(@vm.choose_and_pay('D1', 200)).to eq("Vended: Sandwich and your change: 50p")
   end
 
   it "should keep track of the products and change that it contains." do

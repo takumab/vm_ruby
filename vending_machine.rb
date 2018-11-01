@@ -31,3 +31,11 @@ class VendingMachine
     end
   end
 end
+
+# Few examples of a vending machine instance
+vm = VendingMachine.new
+vm.choose_and_pay('A1', 30)
+vm.choose_and_pay('A1', 50)
+vm.choose_and_pay('D1', 200)
+vm.choose_and_pay('C1', 40)
+vm.choose_and_pay('C1', 50)

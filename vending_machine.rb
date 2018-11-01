@@ -25,9 +25,9 @@ class VendingMachine
       "Please insert #{@products[code][:price] - amount_paid}p more"
     elsif amount_paid > @products[code][:price]
       change = amount_paid - @products[code][:price]
-      "Vended #{@products[code][:name]} and your change: #{change}p"
+      "Vended: #{@products[code][:name]} and your change: #{change}p"
     else
-      @products[code][:name]
+      "Vended: #{@products[code][:name]}"
     end
   end
 end
